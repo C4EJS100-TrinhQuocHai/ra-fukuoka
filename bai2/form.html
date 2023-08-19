@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Form : dùng để tạo form nhập thu thập dữ liệu 
+        các thuộc tính trong form
+        1.action : địa chỉ nơi nhận dữ liệu
+        2.method :phương thức làm việc với form 
+        các thẻ hay dùng trong form
+        lable
+        input
+        giá trị của thuộc tính for của thẻ label trùng với giá trị của thuộc tính
+        id trong thẻ input thì khi nhấn vào thẻ label sẽ tự focus đến ô input.
+        các thuộc tính riêng của thẻ input 
+         + autocomplete :
+         + type :
+            mặc định là type="text"
+            type: password
+            email
+            range
+            date
+            month
+            radio
+                + các ô input có cùng thuộc tính là radio
+                + các ô input có cùng thuộc tính name
+                + mặc định chọn vào ô input thì để thêm thuộc tính checked cho input đó
+            checkbox
+             nếu muốn chọn nhiều thì dùng type ="checkbox";
+        + value: giá trị ô input
+        + placeholder : gợi ý cho người dùng nhập dữ liệu
+        + required    : bắt buộc phải nhập dữ liệu trường này
+     -->
+     <form action="" method="post">
+            <label for="username"> userName </label> <br>
+            <input type="radio" id="username" value="" name="test" checked >A  <br>
+            <input type="radio" id="username" value="" name="test"> B <br>
+            <input type="radio" id="username" value="" name="test"> C <br>
+            <input type="radio" name="gender" checked>  Nam<br>
+            <input type="radio" name="gender" > Nữ<br>
+            <input type="checkbox">A <br>
+            <input type="checkbox"> B<br>
+            <input type="checkbox"> C<br>
+            <input type="text" placeholder="mời bạn nhập email!"  > <br>
+            <input type="text" placeholder="mời bạn nhập mật khẩu"> <br>
+            <input type="file"  multiple>
+            <input type="reset"> <br>
+            <input type="number">
+            <select >
+                <option value="" >Hà Nội</option>
+                <option value="">Hải phòng</option>
+                <option value="" selected>Hồ Chí Minh</option>
+            </select>
+            <textarea name="" id="" cols="5" rows="3"></textarea>
+            <fieldset>
+                <legend>form register</legend>
+                <label for="">username</label> <br>
+                <input type="text" placeholder="mời bạn nhập tên" name="user"> <br>
+                <label for="">password</label> <br>
+                <input type="password" name="password">
+                <button> gửi</button>
+            </fieldset>
+            <button  disabled > send data  </button>
+
+     </form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        table: tạo bảng 
+         + tr: để tạo hàng
+         + td: tạo cột 
+        caption: hiển thị nội dung của bảng
+        các thuộc tính (attribute của table);
+        border: tạo đường viền cho bảng
+        cellpadding:khoảng cách từ content đến boder  trong của bảng
+        cellspacing: khoảng cách từ border bảng đến border content
+        colspan    : để gộp cột
+        rowspan    : để gộp hàng
+        width      : set độ rộng cho table
+        height     : set chiều cao cho table
+        align      : căn chỉnh phần tử trong table
+     -->
+    <table border="1" cellpadding="25px" cellspacing="15" align="center" bgcolor="orange" >
+        <caption> Quản lý sinh viên </caption>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>NAME</th>
+                <th> ADDRESS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr align="center">
+                <td >1</td>
+                <td>Khánh</td>
+                <td > Hà Nội</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <!-- phần cuối của bảng -->
+            <tr>
+                <td colspan="3" >Tổng số sinh viên: 1 </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
