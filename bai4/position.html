@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .box1{
+            width: 300px;
+            height: 400px;
+            background-color: red;
+            position: relative;
+        }
+        .box2{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background-color: #dbdbdb;
+        }
+    </style>
+<body>
+    <!-- 
+        position: nghĩa là vị trí
+        1. absolute : vị trí tuyệt đối
+        nó sẽ ăn theo thằng cha chứa nó gần nhất có thuộc tính là position
+        nếu không có thằng cha thì ăn theo màn hình
+        2. relative : vị trí tương đối
+        nó sẽ ăn theo vị trí ban đầu của nó.
+        3. fixed    : thường làm cố định header
+        4. sticky   : thường tương tác với  thanh cuộn (scroll);
+        ****************
+        phân biệt p và div
+     -->
+    <!--  <div class="box1">
+        box1
+        <div class="box2">
+            box2
+        </div>
+     </div> -->
+    <!--  <div style="background-color: red;">
+        <p> div chứa p</p>
+        Lorem ipsum dolor sit amet.
+     </div>
+     <p style="background-color: violet;">    
+        Lorem ipsum dolor sit amet.
+        <div> p chứa div</div>
+     </p> -->
+</body>
+</html>

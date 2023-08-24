@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<style>
+    /* viết CSS theo cách internal */
+    h2 {
+        background-color: green;
+    }
+</style>
+
+<body>
+    <!-- 
+        CSS :viêt tắt của cascading style sheet : Dùng để tạo phong cách,trang trí cho trang
+        web trở nên đẹp hơn, sinh động hơn
+        - Có 3 cách nhúng CSS vào trang html.
+            C1: inline  : CSS trực tiếp vào các thẻ ( element)
+            C2: internal: viết code CSS   bên trong cặp thẻ <style>
+            C3: external: tạo file có đuôi .css  sau đó thì link file css đó vào html
+            rồi viết code CSS trong file đÓ.
+
+        - Cách định danh cho thẻ-tag (element);
+                class, id là các thuộc tính của element
+         + class: để định danh cho element và nhiều  element có thể trùng class được
+         + id   : để định danh cho element và 1 element nên đặt 1 id
+        - thứ tự độ ưu tiên trong CSS từ bé đến lớn 
+        element ==> class==> id > !important
+        
+        -Các thuộc tính cơ bản của element
+         +color: là màu nội dung text;
+         +font-size: cỡ chữ của text- thường các trình duyệt thì cỡ chữ thường 16px;
+         +font-style: xác định kiểu chữ
+         +font-family: xác định font chữ
+         +font-variant:small-caps : chuyển chữ thường lên chữ hoa
+         +background-color: sét màu nền cho element
+         + width: sét chiều rộng
+         + height: chiều cao
+        NOTE: những thẻ block và inline-block thì set được width,height còn những
+        thẻ  inline thì không set được width-height   
+         -Box-model : 
+            gồm có các thành phần
+            1.border là độ dày của đường viền.
+            2.padding là khoảng cách từ border đến content
+            3.content là nội dung box
+            4.margin: khoảng cách giữa các element
+        - Reset CSS : đưa CSS về trạng thái mặc định
+        - Bộ chọn selector
+         div: division : khu vực 
+     -->
+    <p style="color: red;background-color: #dbdbdb;"> xin chào ra! </p>
+    <h2> Lorem ipsum dolor sit amet.</h2>
+    <h3 class="trang nam thu  "> Lorem, ipsum dolor.</h3>
+    <h4 class="trang"> lorem </h4>
+    <h5 id="lorem" class="h5"> thẻ h5 </h5>
+    <span> Lorem, ipsum dolor.</span>
+    <span> lorem </span>
+
+    <div class="container">
+        container
+    </div>
+    <div class="content">
+        RA
+    </div>
+
+</body>
+
+</html>

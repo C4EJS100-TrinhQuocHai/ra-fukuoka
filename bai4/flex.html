@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<style>
+    .container{
+        background-color: #dbdbdb;
+        height: 400px;
+        display: flex;
+        gap: 5px;
+       /*  flex-direction:row ; 
+        justify-content ăn theo trục main-axis
+         align-items ăn theo trục cross-axis
+       */
+       /* flex-direction: row; */
+        /* justify-content: space-around;
+        align-items: center; */
+       /*  justify-content: center; */
+       /* justify-content: space-evenly;
+       align-items: center;
+       flex-wrap:no-wrap;
+        */
+    }   
+    .item1 {
+        background-color: green;
+        height: 100px;
+        flex-grow: 1;
+        display: flex;
+
+    }
+
+    .item2 {
+        background-color: red;
+        height: 100px;
+        flex-grow: 1;
+    }
+    .item3{
+        background-color: violet;
+        height: 100px;
+        flex-grow: 1;
+    }
+    .circle{
+        width: 50px;
+        height: 50px;
+        border: 1px solid rgb(6, 247, 247);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+</style>
+
+<body>
+    <!-- 
+        display-flex: dùng để căn chỉnh các item 
+     -->
+     <div class="circle">
+        <span class="material-symbols-outlined">
+            eco
+        </span>
+     </div>
+    <div class="container">
+        <div class="item item1">item1
+            <div class="chirld">
+                chirld1
+            </div>
+            <div class="chirld">
+                chirld2
+            </div>
+        </div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3 </div>
+    </div>
+</body>
+
+</html>
