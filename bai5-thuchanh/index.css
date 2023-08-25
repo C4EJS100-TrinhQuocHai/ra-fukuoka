@@ -1,0 +1,48 @@
+/* 
+Bước đầu tiên phải reset CSS
+
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS khối block-container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px auto;
+    justify-content: space-around;
+    row-gap: 20px;
+}
+/* CSS khối element container-item */
+.container__item {
+    background-color: #f8f8f8;
+    width: 30%;
+    /* margin-bottom: 20px; */
+}
+/* CSS khối modifier */
+.container--circle {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #3fa09f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+.container--circle .leaf{
+    color: #3fa09f;
+}
+.container--heading {
+        text-align: center;
+}
+.container--title {
+        text-align: center;
+}
+.container--title p{
+    margin: 0px 10px;
+}
