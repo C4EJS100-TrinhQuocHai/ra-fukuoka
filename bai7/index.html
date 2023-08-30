@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        falsy: NaN,null,undefined,false,0,"",''
+        câu điều kiện ( condition ) &&  vòng lặp (loop);
+        1.if
+         điều kiện trong if nếu là trusthy thì thân sẽ thực thi
+         còn điều kiện trong if là falsy thì thân sẽ không được thực thi
+
+        2.if-else
+        3.if-else bậc thang
+        4.if-else lồng
+        - tức là bên trong if-else có thể chứa if-else được
+        5. câu điều kiện switch-case
+        ************
+        LOOP
+        1 for
+            cấu trúc cơ bản của vòng for thường gồm 3 phần
+            -giá trị khởi tạo
+            -điều kiện
+            -bước nhảy
+            NOTE: các phần ngăn cách với nhau bởi dấu chấm phẩy(;)
+        for  lồng tức là for lồng for
+        break trong for:
+        vòng lặp gặp break thì sẽ thoát khỏi vòng lặp 
+        2 while
+        - điều kiện đúng thì thân mới chạy
+        - điều kiện sai thân không chạy
+        3 do- while
+            sẽ thực thi trước rồi mới kiểm tra điều kiện
+            ==> dowhile sẽ chạy ít nhất 1 lần
+     -->
+    <script>
+        /* 
+         viết vòng for chạy từ 1 đến 10
+         in ra những số chẵn 
+         */
+        //"123456"!="123456"
+        let text=prompt("mời nhập mật khẩu");
+        while (text!="123456") {
+                text=prompt("mờI nhập mật khẩu");
+                break;
+        }
+
+        let i=1;
+        do {
+            // thực hiện trước rồi mới kiểm tra điều kiện
+            console.log(`i:${i}`);
+            i++;
+            if(i==5){
+                break;
+            }
+        } while (i<11);
+        for (let i = 0; i < 4; i++) {
+          if(i==2){
+            continue;// bỏ qua quay về bước nhảy;
+          }
+          console.log(`${i}`);
+            
+        }
+
+        let count=1;
+        do {
+            let password=prompt("mời nhập mật khẩu");
+            if(password!="123456"){
+                count++
+            }else{
+                break;
+            }
+        } while (count<4);
+    </script>
+</body>
+
+</html>
