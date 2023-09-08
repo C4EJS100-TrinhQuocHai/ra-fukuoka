@@ -44,13 +44,13 @@
          in ra những số chẵn 
          */
         //"123456"!="123456"
-        let text=prompt("mời nhập mật khẩu");
-        while (text!="123456") {
-                text=prompt("mờI nhập mật khẩu");
-                break;
-        }
+        // let text=prompt("mời nhập mật khẩu");
+        // while (text!="123456") {
+        //         text=prompt("mờI nhập mật khẩu");
+        //         break;
+        // }
 
-        let i=1;
+         let i=1;
         do {
             // thực hiện trước rồi mới kiểm tra điều kiện
             console.log(`i:${i}`);
@@ -67,15 +67,29 @@
             
         }
 
-        let count=1;
-        do {
-            let password=prompt("mời nhập mật khẩu");
-            if(password!="123456"){
-                count++
+        // let count=1;
+        // do {
+        //     let password=prompt("mời nhập mật khẩu");
+        //     if(password!="123456"){
+        //         count++
+        //     }else{
+        //         break;
+        //     }
+        // } while (count<4);
+        let a=6;
+        if(a>5){
+            console.log(`${a} lớn hơn 5`);
+            if(a>3){
+                console.log("111");
             }else{
-                break;
+                console.log("222");
             }
-        } while (count<4);
+            
+        }else{
+            console.log(`${a} bé hơn 5`);
+
+        }
+        a>5 ?  a>3 ? console.log("111"): console.log("222") : console.log(`${a} bé hơn 5`);
     </script>
 </body>
 

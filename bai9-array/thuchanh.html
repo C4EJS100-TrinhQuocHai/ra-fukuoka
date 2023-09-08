@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+      Bai1:  viết chương trình cho người dùng nhập đủ 5 số nguyên vào 1 cái mảng
+        nếu không phải số nguyên yêu cầu nhập lại đủ 5 số nguyên thì thôi
+      Bai2: viết chương trình nhập vào đoạn text ngăn cách bởi dấu cách
+      sau đó in ra chuỗi mới viết hoa chữ cái đầu tiên.
+      vd: input:" xin chào việt nam";
+          output: "Xin Chào Việt Nam";
+      Bài 3: Viết chương trình nhập vào 1 chuỗi , kiểm  tra xem chuỗi đó có phải chuỗi
+      đối xứng hay không
+      Bài 4: Viết chương trình nhập vào chuỗi ngăn cách bởi dấu cách
+      nếu gặp chữ hoa chuyển về chữ thường, nếu gặp chữ thường chuyển thành viết hoa
+       vd: input : heLlo Viet nAm;
+           output: HElLO vIET NaM;
+      Bai 5: viết chương trình sắp xếp các phần tử trong mảng từ bé đến lớn
+       vd: input :[6,7,4,66,77,8];
+           output:[4,6,7,8,66,77];
+      Bài 6: xoá các kí tự trùng nhau trong 1 mảng
+       vd: input :[1,1,1,5,5,5,4,1,1];
+           output:[1,4,5];
+     -->
+     <script>
+        // tạo mảng để chứa 5 số nguyên
+
+        let arr=[];
+        while(arr.length<5){
+            let number=+prompt("mời nhập số nguyên");
+            if(Number.isInteger(number)){
+                arr.push(number);
+            }
+        }
+        console.log(arr);
+        
+
+     </script>
+</body>
+</html>
