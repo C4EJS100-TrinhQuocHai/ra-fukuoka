@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+        function
+        1 Khái niệm
+            - tập hợp các câu lệnh thực hiện 1 tác vụ cụ thể
+            - hàm có thể tái sử dụng lại.( viết 1 lần mà dùng được nhiều lần)
+
+        2. Các loại hàm hay dùng và cách khai báo, các dùng ,của từng loại hàm.
+            2.1 function bình thường.
+            - quy tắc đặt tên function : quy tắc camel-case( giống quy tắc đặt tên biến)
+            thường bắt đầu bằng động từ.
+            - để hàm được thực thi thì mình phải gọi hàm.
+            - có thể gọi trưỚc khi hoặc sau khi khai báo.
+            2.2 expression function
+            - khi khai báo gán nó cho 1 biến.
+            - đối với hàm này mình phải gọi sau khi khai báo (nếu gọi  trước khi khai báo s
+            sẽ báo lỗi.)
+            - có thể để tên hàm hoặc không nhưng nên để tên hàm cho mọi người biết chức năng
+            của hàm dùng để làm gì.
+            2.3
+          arrow function: hàm mũi tên
+        - mình cũng phải gọi sau khi khai báo không được gọi trước khi khai báo
+        - cú pháp gọn gàng hơn
+        - không có CONTEXT(this).
+
+        3. tham số , đối số trong hàm
+        - nhờ tham số , đối số nên hàm mới có khả năng tái sử dụng.
+        3.1: đối số (argument)
+        - khi gọi hàm truyền cho nó giá trị
+        3.2: tham số(parameters)
+        - nhận giá trị
+
+        4. return trong hàm
+        - hàm gặp return dừng chương trình luôn không chạy nữa.
+        - nếu muốn lấy giá trị của hàm thì dùng return trả về kết quả.
+        - không được ghi các câu lệnh dưới câu lệnh return
+
+        5. đệ quy trong hàm
+        - hàm được tự gọi lại chính nó 
+        - khi dùng đệ quy nên có điểm dừng không sẽ bị treo máy (vòng lặp vô tận);
+
+        6. call-back
+        - là hàm được truyền vào làm đối của hàm khác
+        - thường dùng để xử lý tác vụ bất đồng bộ
+        - map, reduce, forEach, filter
+     -->
+    <script>
+        function check(a) {
+            if (a == 2) return 11;
+            return a + check(a - 1);
+        }
+        let result = check(4); // 4 + check(3)==> 4+3+11
+        console.log(result);
+
+        // function test() {
+        //     var a;
+        //     console.log(a);
+        //        a=9;
+        // }
+        // test();
+        // console.log(a);//deep-zone
+        // var a=7;
+        // let xinSoDt;
+
+        // function goiDien(callBack) {
+
+        //     console.log("Nam gọi cho Châu xin số Trang");
+        //     console.log("Châu bảo đợi tí");
+
+        //     setTimeout(() => {
+        //         console.log("tìm thấy số rồi");
+        //         xinSoDt="0952665886";
+        //         callBack(xinSoDt);
+        //     }, 4000);
+
+        // }
+        // function say(phone) {
+        //     console.log(`gọi cho Trang theo số ${phone}`);
+        // }
+        // goiDien(say);
+
+
+        // function tinhTong(a,b) {
+        //     if(a>b){
+        //         return 0;
+        //     }
+        //     return a + tinhTong(++a,b);
+        // }
+        // /* 
+        //     1 + 2 +tinhTong(3)
+        //  */
+        // console.log(tinhTong(3,6));
+
+        // console.log(Math.floor(Math.random() * 101));
+        // // 0<= X < 1
+        // function uuid() {
+        //     return Math.floor(Math.random() * 999999999999);//0--0.99  0-98
+        // }
+
+        // // console.log(uuid());
+
+        // function tinhTong(param1, param2) {
+        //     let total = 0;
+        //     for (let i = param1; i <= param2; i++) {
+        //         total += i;
+        //     }
+        //     console.log(`tổng từ ${param1} đến ${param2} bằng ${total}`);
+        //     // templatestring-literals
+        //     return 100
+        //     console.log("555555");
+        // }
+        // let ketQua = tinhTong(1, 5);
+        // console.log(ketQua);
+        // tinhTong(3, 6);
+
+
+        // function showInfo(firstName, lassName, chau) {
+        //     console.log(chau);
+        //     console.log(lassName + firstName);
+        // }
+        // showInfo("vân", "vũ hồng ", "châu");
+
+        // let array=[7,8,96,7,45];
+
+        //     let result=array.filter(function (item) {
+        //         return item>7
+        //     }
+        //     )
+        //     console.log(result);
+
+        //  let result = () => {
+        //         console.log("xin chào!");
+        //         return 6
+        //     }
+        //     result();
+
+        // let result= function (){
+        // console.log("xin chào học viên ra!");
+        // }
+        // result();
+
+        //  sayHello();
+        // function sayHello() {
+        //     console.log("xin chào mọi người!");
+        // }
+        function ArrayBoolean() {
+            if ([] == true && [1] == true)
+                return [true, true];
+            else if ([] == true && [1] == false)
+                return [true, false];
+            else if ([] == false && [1] == true)
+                return [false, true];
+            else return [false, false];
+        }
+        let result1 = ArrayBoolean();
+        console.log(result1);
+        console.log(5==true);
+        console.log(3>2>1);
+        console.log(1<2<3);
+    </script>
+    <!-- <script src="./index.js"></script> -->
+</body>
+
+</html>
