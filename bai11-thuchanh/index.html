@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            Các phương thức làm việc với mảng
+            1.map
+            -trả về 1 mảng mới 
+            - đối với map số lượng phần tử trả về bằng số lượng phần tử ban đầu
+            2.forEach
+            - không nhận return , tương tác trực tiếp các phần tử trong mảng
+            3.filter
+            - trả về 1 mảng mới
+            -lọc theo điều kiện lọc
+            4.reduce
+            - reduce nhận vào 2 đối số. 
+            1. 1 hàm callback
+            2. là giá trị khởi tại initial value
+            - sử dụng để tính toán trả về 1 kết quả duy nhất.
+            5.find
+            -tìm kiếm phần tử thoả mãn
+            -nếu không có trả về undefined
+            -trả về kết quả tìm thấy đầu tiên
+            6.findIndex
+            -trả về vị trí phần tử thoã mãn nếu không có trả về -1
+         */
+        /* cho mảng bất kì  sau đó cho người dùng nhập vào 1 số bất kì
+        in ra số lớn nhất thứ 2 số vừa nhập nếu không có trả về -1 ;
+         */
+        let arr=[6,8,7,9,13,15,17,19];//9
+        /* 
+         Các bước làm
+         B1: sắp xếp mảng ban đầu theo thứ tự từ bé đến lớn
+         B2. lấy ra phần tử lớn thứ 2 trong mảng
+         B3. kiểm tra phần tử đó có lớn hơn số nhập vào hay không?
+         -đúng: in ra số đó
+         -sai : in ra -1
+         */
+            // let a=9;
+            // console.log(Math.sqrt(a));
+            // console.log(3**4);
+            // // let number =+prompt("mời bạn nhập số cần kiểm tra");
+            // let result= arr.sort((a,b)=>{
+            //         return -a+b; 
+            //         // căn 2 2 mũ 1/2 sqrt
+            // })
+            // //[4,7,9,11]
+            // console.log(result);
+            // let check= result[result.length - 2];
+            // if(check>number){
+            //     console.log(`số lớn nhất thứ 2 lớn hơn ${number} trong mảng ban đầu là ${check}`);
+            // }else{
+            //     console.log("không có số thoả mãn");
+            // }
+
+        // let result= arr.findIndex((item)=>{
+        //         return item>611
+        // })
+        // console.log(result);
+
+        // let result= arr.forEach((item1,index2)=>{
+        //     // console.log("item11111", item1);
+        //     // console.log("index1111", index2);
+        //     // console.log("*************************");
+        //     arr[index2]=item1*2;
+        // })
+        //  console.log("result",arr);
+        // let result= arr.reduce((accumulator,item)=>{
+        //         return accumulator+item
+        // },0)
+        // console.log(result);
+
+        // let products=[
+        //     {
+        //         name:"iphone5",
+        //         price:5000,
+        //         quantity:4
+        //     },
+        //      {
+        //         name: "iphone6",
+        //         price: 7000,
+        //         quantity: 3
+        //     },
+        //      {
+        //         name: "iphone5",
+        //         price: 6000,
+        //         quantity: 2
+        //     },
+        // ]
+
+        //     let result=products.reduce((acc,item)=>{
+        //         return acc+ item.price*item.quantity;
+        //     },0)
+        //     console.log(result);
+
+        for (let i = 1; i <=5; i++) {
+          for (let j = 1; j <=i; j++) {
+                document.write("*");
+          }
+           document.write("<br>");// &nbsp;
+        }
+    </script>
+</body>
+</html>
