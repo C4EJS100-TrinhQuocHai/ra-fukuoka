@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .abc{
+        color:red
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1 class="a"> xin chào</h1>
+<body>
+    <!-- 
+        Object : đối tượng 
+       1. lập trình hướng đối tượng là như thế nào
+       ( liên quan đến thực tế , thực tiễn trong đời sống)
+       các đối tượng bao gồm các thuộc tính (property) và phương thức ( method)
+       vd: 1 con mèo : 
+        +các thuộc tính (cân nặng,màu lông, màu mắt);
+        +các phương thức( bắt chuột, chạy,kêu);
+       vd: 1 người sẽ có 
+        + các thuộc tính(béo,gầy,màu da.....)
+        + các phương thức (ca, hát, ăn, ngủ, làm bài tập.....)
+
+        ***********************************
+        + Các tính chất quan trọng của OOP
+        1. Đa hình
+        2. Trừu tượng
+        3. Đóng gói 
+        4. Kế thừa 
+       2. Các khởi tạo đối tượng
+        3  cách để khởi tạo đối tượng
+        CÁCH1: dùng từ khoá khai báo biến, let, const, var
+        -các cặp key-value ngăn cách với nhau bởi dấu ,
+        CÁCH2: dùng hàm tạo để tạo đối tượng
+        CÁCH3: dùng class
+       3. CRUD với đối tượng
+        C: Create thêm mới.
+        R: Đọc
+        U: Update
+        D: Delete
+
+       4. tham chiếu,tham trị;
+       5. cách clone object trong javascript
+        1. deep clone
+        2. shallow clone
+       -toán tử spread ...
+       -Object.asign()
+       -dùng JSON.parse(JSON.stringIfy);
+
+
+    -->
+    <script>
+        document.getElementsByClassName("a")[0].classList.add("abc");
+        let student={
+            address:"HN",
+            name:"Minh",
+            // key:"RA!",
+        }
+        delete student.name;
+        console.log(student);
+        // student.age=26;
+        // student.name="Ngọc";
+        // console.log(student);
+        // console.log(student.name);
+        //  for (const key in student) {
+        //         if(key=="name"){
+        //             console.log(student[key]);
+        //         }
+        //  }
+      
+
+
+
+
+
+        // class Student {// ES6 :2015,let ,const
+        //     constructor(name,age,address){
+        //         this.hairColor=name;
+        //         this.address=address;
+        //     }
+        //   run(name){
+        //     console.log(`xin chào ${name}`);
+        //     return 5
+        //   }  
+        // }
+        // let student1= new Student("xanh",25,"HN");
+
+
+        // let student2= new Student("Hoa",26,"HCM");
+        // let student100= new Student("Hùng",21,"ĐN");
+        // console.log("student1",student1);
+        // console.log("student100",student100);
+        // console.log(student1.run("lan"));
+        // hàm  tạo constructor như 1 cái khuôn mẫu để tạo ra các đối tượng.
+        //  function Student(name,age) {
+        //     this.name=name;
+        //     this.age=age;
+
+        //  }
+        //  let student1= new Student("Nam",25);
+        //  let student2= new Student( "Hoa",26);
+        //  let student100= new Student("Hùng",21);
+        //  console.log("student1", student1);
+        //  console.log("student100", student100);
+
+
+        // let student1 = {
+        //     name: "Nam",
+        //     age: 25
+        // }
+        // let student2 = {
+        //     name: "Hoa",
+        //     age: 26
+        // }
+        // let studen100 = {
+        //     name: "hùng",
+        //     age: 21
+        // }
+        //    let cat = {
+        //         name:"Tôm",
+        //         age:2,
+        //         run:(mouse)=>{
+        //             console.log(`đang đi bắt con chuột tên là ${mouse} `);
+        //         },
+
+        //    }
+        //    cat.run("jerry");
+    </script>
+</body>
+
+</html>
