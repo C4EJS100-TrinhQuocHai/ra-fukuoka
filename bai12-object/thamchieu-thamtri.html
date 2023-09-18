@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        I .primitive type -kiểu tham trị
+        -kiểu dữ liệu nguyên thuỷ
+        => gán giá trị
+        II.reference type -kiểu tham chiếu
+        -kiểu phức tạp ( array,function,object);
+        gán địa chỉ chứ không phải gán giá trị
+         */
+        let a=5;
+        let b=a;
+        a=6;
+        console.log("b",b);// b không liên quan
+        // b=6; "lan" 
+        // b=6; "lan"
+        // b=6; "lan"
+        // b=5; "lan"
+        // b=5; "khánh"
+        let obj1={
+            name:"khánh",
+        }
+        let obj2=obj1;
+        obj1.name="lan";
+        console.log("obj2",obj2.name);
+
+        
+        let number1=6;
+        let number2=6;
+        console.log(number1==number2);
+        let obj11={
+            name:"hoa",
+        }
+        let obj22={
+            name:"hoa",
+        }
+        console.log(obj11==obj22);
+    </script>
+</body>
+</html>

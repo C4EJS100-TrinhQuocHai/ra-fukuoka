@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #heading {
+            color: red;
+        } */
+        .title{
+            color:red;
+        }
+        .title1{
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p> đây là thẻ p thứ nhất </p>
+    <p> thẻ p thứ hai</p>
+    <h2 class="title"> đây là thẻ h2 </h2>
+    <!-- 
+       I. Dom: document object model : mô hình tài liệu đối tượng
+        Khi trang html được tải lên thì trình duyệt sẽ tạo ra 1 mô hình cây DOM
+        thì dựa vào mô hình cây Dom này chúng ta có thể tương tác với web-site
+        cụ thể : thay đổi các element( thêm , sửa, xoá ....) ...
+        Dom gồm 3 thành phần
+        1. element   - các thẻ tag
+        2. attribute - các thuộc tính
+        3. text      - nội dung của element
+        *****************
+        
+       II.cách cách truy xuất để lấy ra element
+        1.lấy theo class.
+        ==> trả về dạng HTML collection ( dạng mảng nhưng không phải mảng)
+        tại sao lại dạng mảng vì mình có thể duyệt for, lấy các phần tử theo index
+        2.lấy theo id.
+        ==> trả về 1 đối tượng( element duy nhất).
+
+        3.lấy theo thẻ tag.
+        ==> trả về dạng HTML colection (dạng mảng nhưng không phải mảng)
+
+        4.lấy theo querySelector.
+        ==> trả về dạng đối tượng duy nhất
+
+        5.lấy theo querySelectorAll
+        ==> trả về dạng NODELIST 
+        dạng mảng nhưng không phải mảng 
+
+     -->
+    <script>
+        // let elements= document.getElementById("heading");
+        // let elements=document.getElementsByClassName("title");
+        // console.log("elements",elements);
+        // for (let i = 0; i < elements.length; i++) {
+        //         // console.log(`phần tử thứ ${i+1},${elements[i]}`);
+        //         console.log(elements[i]);
+
+        // }
+        // let elements= document.getElementsByTagName("p");
+        // let elements= document.querySelector(".title");
+
+        /* 
+         BTVN: phân biệt HTML collection và Nodelist khác nhau như thế nào.
+         */
+        // let elements=document.querySelectorAll(".title");
+        // let elements = document.getElementById("heading");
+        // elements.style.color="red";
+        // console.log(elements);
+        //     let obj={
+        //         name:"nam"
+        //     }
+        //     obj.age=27;
+        let elements = document.querySelector("p");
+        // elements.id = "heading";
+        // elements.className="title title1";
+            elements.classList.add("title");
+            // add thêm
+            // remove xoá
+            // toggle như một công tắc có class thì xoá đi không có thì thêm vào
+            // contain kiểm tra xem element có tồn tại class đó hay không?
+
+
+
+    </script>
+</body>
+
+</html>

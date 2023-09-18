@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Cách clone object trong JS
+        I-shallow clone -clone nông-clone không hết
+        1.Dùng toán tử spread
+        2.Dùng Object.asign() :
+        II- Deep-clone- clone-sâu (clone hết)
+        1.dùng chuyển sang kiểu JSON
+     -->
+    <script>
+        let obj1={
+            name:"khánh",
+            address:{
+                city:"HN"
+            }
+        }
+        // let obj2={...obj1};
+        // obj1.name="lan";
+        // obj1.address.city="SG"
+        // console.log("obj2",obj2.address.city);
+
+        /* let obj2= JSON.parse(JSON.stringify(obj1));
+        obj1.address.city="SG";
+        console.log(obj2); */
+
+        let obj2=Object.assign({},obj1);
+        console.log(obj2);
+        // obj1.name="lan";
+        // obj1.address.city="SG"
+        // console.log(obj2.address.city);
+     
+    </script>
+</body>
+</html>
