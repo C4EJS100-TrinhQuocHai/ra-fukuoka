@@ -9,10 +9,16 @@
         /* #heading {
             color: red;
         } */
-        .title{
+        /* .title{
             color:red;
         }
         .title1{
+            font-size: 50px;
+        } */
+        .heading{
+            color: red;
+        }
+        .title{
             font-size: 50px;
         }
     </style>
@@ -22,6 +28,21 @@
     <p> đây là thẻ p thứ nhất </p>
     <p> thẻ p thứ hai</p>
     <h2 class="title"> đây là thẻ h2 </h2>
+    <h3 class="title "> đây là thẻ h3 </h3>
+    <div class="content">
+        <h5> đây là thẻ h5 </h5>
+    </div>
+    <script>
+        // let arr=[5,8,9,7];
+        // arr[0]
+        // let element= document.getElementsByClassName("title");
+        //     element[1].text="thẻ h3 vừa mới được cập nhật";
+        // console.log(element);
+        // element.className="heading title";
+
+        // console.log(element[0]);
+        let element= document.getElementsByClassName("content")[0].innerHTML=` <h6> đây là thẻ h6 </h6>`
+    </script>
     <!-- 
        I. Dom: document object model : mô hình tài liệu đối tượng
         Khi trang html được tải lên thì trình duyệt sẽ tạo ra 1 mô hình cây DOM
@@ -41,7 +62,7 @@
         ==> trả về 1 đối tượng( element duy nhất).
 
         3.lấy theo thẻ tag.
-        ==> trả về dạng HTML colection (dạng mảng nhưng không phải mảng)
+        ==> trả về dạng HTML collection (dạng mảng nhưng không phải mảng)
 
         4.lấy theo querySelector.
         ==> trả về dạng đối tượng duy nhất
@@ -49,6 +70,14 @@
         5.lấy theo querySelectorAll
         ==> trả về dạng NODELIST 
         dạng mảng nhưng không phải mảng 
+
+        III - attribute
+
+        IV  - text
+        1.innerHTML
+        - có thẻ thay đổi nội dung là  thẻ HTMl được còn innerText và textContent thì không
+        2.innerText
+        3.textContent
 
      -->
     <script>
@@ -74,15 +103,16 @@
         //         name:"nam"
         //     }
         //     obj.age=27;
-        let elements = document.querySelector("p");
+        // let elements = document.querySelector("p");
         // elements.id = "heading";
         // elements.className="title title1";
-            elements.classList.add("title");
+            // elements.classList.add("title");
             // add thêm
             // remove xoá
             // toggle như một công tắc có class thì xoá đi không có thì thêm vào
             // contain kiểm tra xem element có tồn tại class đó hay không?
 
+            
 
 
     </script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">
+        <ul style="display: none;">
+            <li>1</li>
+            <li>2</li>
+        </ul>
+    </div>
+    <!-- 
+        phân biệt innerText và textContent
+        đối với innerText thì những gì trình duyệt hiển thị thì nó sẽ được in ra
+        còn textContent thì không.
+
+     -->
+     <script>
+        let result= document.getElementsByClassName("title")[0];
+        console.log("innerText",result.innerText);
+        console.log("textContent",result.textContent);
+     </script>
+</body>
+</html>

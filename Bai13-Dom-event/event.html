@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .event{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="mời bạn nhập tên" id="name" onchange="changeValue()">
+    <div class="title">
+        event 
+    </div>
+    <img src="" alt="">
+    <!-- <button onclick="changeColor()"> click </button> -->
+    <button id="button"> click </button>
+
+
+    <script>
+        function changeValue() {
+            let result=document.getElementById("name").value;
+            console.log("result", result);
+        }
+    </script>
+
+    <!-- 
+        EVENT- các sự kiện giúp tương tác với trang web
+        classList là lấy ra danh sách class của element
+        các phương thức dành cho classList là
+        1.add  : thêm class
+        2.remove: xoá phần tử
+        3. toggle :kiểm tra xem element có class đó chưa nếu chưa có thì thêm vào
+        nếu có rồi thì xoá đi
+        4.contains : phương thức trả về true/false nếu trong element tồn tại class
+        thì phương thức trả về true còn lại trả về false.
+     -->
+     <script>
+        // let elems=document.getElementsByTagName("div");
+        // let result= elems[0].classList.contains("title");
+        // console.log(result);
+
+        // function changeColor() {
+        //     // console.log(" đã bắt vào hàm!");
+        //     // document.getElementsByClassName("title")[0].style.color="red";
+        //      document.getElementsByClassName("title")[0].classList.toggle("event");
+        //     // setTimeout(() => {
+        //     //     test();
+        //     // }, 3000);
+          
+        // }
+        // function test() {
+        //     document.getElementsByClassName("title")[0].classList.remove("event");
+        // }
+            // let element= document.getElementById("button");
+            // element.addEventListener("click",()=>{
+            //     console.log("đã bắt được sự kiện click");
+            // })
+
+            // document.addEventListener("keypress",(event)=>{
+            //         console.log(event.code);
+            // })
+     </script>
+</body>
+</html>
