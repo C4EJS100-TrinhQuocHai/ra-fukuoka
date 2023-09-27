@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Storing data in the browser </h2>
+    <!-- 
+        Storing data in the browser 
+        ( lưu trữ dữ liệu trên trình duyệt)
+        1mb=1024Kb,
+        1kb=1024b
+        1b =8bit
+        I  -localStorage
+          1. dữ liệu khi lưu sẽ không bị mất đi 
+          2. bộ nhớ lưu trữ của nó tầm 5-10Mb
+          không gửi dữ liệu lên server được
+          ******************
+          Cách tương tác dữ liệu với localStorage
+          1.lưu
+          -khi lưu dữ liệu localStorage sẽ chuyển hết dữ liệu sang dạng string để lưu
+          localStorage.setItem("tên_key","giá trị");
+          -Khi lưu object hoặc array thì phải chuyển sang định dạng JSON để lưu
+          localStorage.setItem("obj",JSON.stringify("obj"))
+          -Khi lấy về dùng phải (parse) 
+          2.xoá 1 key
+          localStorage.removeItem("tên_key vào")
+          3. xoá hết key
+          localStorage.clear()
+          4. lấy về dùng
+           localStorage.getItem("tên_Key")
+
+        II -Session Storage 
+          1. Phiên làm việc(  dữ liệu sẽ bị mất đi khi đóng trình duyệt )
+          - f5 sẽ không bị mất dữ liệu
+          2. bộ nhớ lưu trữ tầm 3-5MB
+            -không gửi dữ liệu lên server được
+        
+        III-Cookies
+          1. dữ liệu khi lưu mình có thể set thờI gian  cho nó..
+          2. dữ liệu tầm 4kb
+          công dụng: 
+         + giúp người dùng có thể duy trì trạng thái đăng nhập
+         + bắt nội  dung tìm kiếm , nội dung người dùng quan tâm....
+         + có  thể gửi kèm request mỗi lần gửI thông tin lên server
+
+     -->
+     <script>
+        // localStorage.setItem("bienA",5);
+        // sessionStorage.setItem("bienB",7)
+        // localStorage.setItem("name1","Nam   ");
+        // localStorage.removeItem("bienA");
+        // localStorage.clear();
+        // localStorage.setItem("name1","Khánh");
+        // localStorage.setItem("name2", "Nam");
+        // localStorage.setItem("bienA",5)
+        // let result= localStorage.getItem("bienA");
+        // localStorage.setItem("obj",{
+        //     name:"name"
+        // })
+            // localStorage.setItem("obj",JSON.stringify({
+            //     name:"khánh"
+            // }))
+
+            let result= localStorage.getItem("obj");
+            console.log(result);
+            console.log(JSON.parse(result));
+     </script>
+</body>
+</html>
