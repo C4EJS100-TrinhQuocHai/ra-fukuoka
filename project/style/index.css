@@ -1,0 +1,33 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ /* 
+    CSS những cái chung
+
+  */
+  a{
+    text-decoration: none;
+  }
+  ul li{
+    list-style: none;
+  }
+ .product-list {
+     display: flex;
+     flex-wrap: wrap;
+     width: 100%;
+     height: 600px;
+     justify-content: center;
+
+ }
+
+ .product-item {
+     width: 430px;
+     height: 200px;
+ }
+
+ .product-item img {
+     width: 80%;
+     height: 100%;
+ }
