@@ -13,6 +13,25 @@
   ul li{
     list-style: none;
   }
+  /* CSS phần đầu trang */
+  .navigation{
+    display: flex;
+    background-color: #ccc;
+    margin-bottom: 50px;
+    height: 50px;
+    line-height: 50px;
+    gap: 10px;
+    
+  }
+  .navigation .count{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+  }
  .product-list {
      display: flex;
      flex-wrap: wrap;
@@ -23,8 +42,8 @@
  }
 
  .product-item {
-     width: 430px;
-     height: 200px;
+     width: 350px;
+     height: 150px;
  }
 
  .product-item img {

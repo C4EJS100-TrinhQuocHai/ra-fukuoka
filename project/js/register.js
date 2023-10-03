@@ -26,10 +26,17 @@ function register() {
    })
    if(check.length==0){
     // tức là tài khoản chưa được đăng kí
-       users.push(obj);
-       localStorage.setItem("users",JSON.stringify(users));
-       //khi đăng kí thành công chuyển sang trang đăng nhập
-       window.location.href="../pages/login.html"
+    // trước khi push phải kiểm tra xem password có trùng confirm hay không
+       if(confirmPassword  != password){
+        // alert("mật khẩu không khớp!")
+        document.getElementsByClassName("error")[0].style.display="block";
+       }else{
+           document.getElementsByClassName("error")[0].style.display = "none";
+           users.push(obj);
+           localStorage.setItem("users", JSON.stringify(users));
+           //khi đăng kí thành công chuyển sang trang đăng nhập
+           window.location.href = "../pages/login.html"
+       }
    }else{
     alert("tài khoản đã tồn tại!")
    }

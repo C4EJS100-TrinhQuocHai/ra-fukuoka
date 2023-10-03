@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
     <!-- trang chính lần đầu tiên người dùng vào trang web -->
-  <!-- Header -->
-  <header>
-    <nav>
-        <a href="./pages/login.html">Login</a>
-        <a href="./pages/register.html">Register</a>
+    <!-- Header -->
+    <header>
+        <nav class="navigation">
+            <a href="./pages/login.html">Login</a>
+            <a href="./pages/register.html">Register</a>
+            <div class="cart">
+                <a href="./pages/cart.html">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                    </span>
+                </a>
+                <span class="count">0</span>
+            </div>
 
-    </nav>
-  </header>
-  <!-- Main -->
+        </nav>
+    </header>
+    <!-- Main -->
     <!-- Tiềm kiếm -->
     <!-- Sắp xếp sản phẩm theo tên,theo giá  (tăng dần,giảm dần) -->
     <!-- hiển thị danh sách sản phẩm  -->
     <div class="product-list">
-       <!--  <div class="product-item">
+        <!--  <div class="product-item">
             <img src="./assets/images/anh1.webp" alt="">
             <p>bánh 1</p>
             <p> price </p>
@@ -52,8 +64,9 @@
             <p><button>mua</button></p>
         </div> -->
     </div>
-  <!-- Footer -->
+    <!-- Footer -->
     <!-- link index.js vào index.html -->
     <script src="./js/index.js"></script>
 </body>
+
 </html>
