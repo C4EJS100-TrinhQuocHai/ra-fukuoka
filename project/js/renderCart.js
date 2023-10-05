@@ -25,9 +25,9 @@ function renderCart() {
                                 <td> ${users[i].cart[j].name} </td>
                                 <td>${VND.format(users[i].cart[j].price)}</td>
                                 <td>
-                                    <button>-</button>
+                                    <button onclick="decrease()">-</button>
                                             ${users[i].cart[j].quantity}
-                                    <button>+</button>
+                                    <button onclick="increase(${users[i].cart[j].id})">+</button>
                                 </td>
                                 <td>${VND.format(users[i].cart[j].price * users[i].cart[j].quantity)}</td>
                                 <td > xoá </td>
@@ -48,3 +48,24 @@ function renderCart() {
     }
 }
 renderCart();
+// function tăng số lượng sản phẩm
+function increase(productId) {
+    // console.log("1111", productId);
+    let checkLogin = localStorage.getItem("userId");
+    let users = JSON.parse(localStorage.getItem("users"));
+    if (checkLogin != null) {
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].id == checkLogin) {
+                for (let j = 0; j < users[i].cart.length; j++) {
+                    if(users[i].cart[j].id==productId){
+                        users[i].cart[j].quantity == ++users[i].cart[j].quantity;
+                        localStorage.setItem("users",JSON.stringify(users));
+                        renderCart();
+                    }
+                    
+                }
+            }
+        }
+    }
+
+}

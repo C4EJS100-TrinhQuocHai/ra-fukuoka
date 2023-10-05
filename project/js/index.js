@@ -4,35 +4,35 @@
 //  function hiển thị danh sách sản phẩm
 let productList = [
     {
-        name: "bánh 1",
+        name: "hoa sen",
         price: 60000,
         id: 65375465,
         src: "./assets/images/anh1.webp",
         stock: 15,
     },
     {
-        name: "bánh 2",
+        name: "kinh đô",
         price: 54000,
         id: 678578,
         src: "./assets/images/anh2.jpg",
         stock: 5,
     },
     {
-        name: "bánh 3",
+        name: "hồng ngọc",
         price: 59000,
         id: 324545346,
         src: "./assets/images/anh3.jpg",
         stock: 8,
     },
     {
-        name: "bánh 4",
+        name: "nam khánh",
         price: 82000,
         id: 676757,
         src: "./assets/images/anh4.jpg",
         stock: 4,
     },
     {
-        name: "bánh 5",
+        name: "hồng vân",
         price: 90000,
         id: 65345334,
         src: "./assets/images/anh5.jpg",
@@ -47,22 +47,25 @@ const VND = new Intl.NumberFormat('vi-VN', {
 // lưu sản phẩm trên local
 localStorage.setItem("productList", JSON.stringify(productList));
 let products = JSON.parse(localStorage.getItem("productList"));
-function renderProducts() {
+function renderProducts(productList) {
+    if(productList==undefined){
+        productList=[];
+    }
     let text = "";
-    for (let i = 0; i < products.length; i++) {
+    for (let i = 0; i < productList.length; i++) {
         text +=
             `
             <div class="product-item">
-                <img src="${products[i].src}" alt="">
-                <p>${products[i].name}</p>
-                <p> ${VND.format(products[i].price)} </p>
-                <p><button onclick="addToCart(${products[i].id})">mua</button></p>
+                <img src="${productList[i].src}" alt="">
+                <p>${productList[i].name}</p>
+                <p> ${VND.format(productList[i].price)} </p>
+                <p><button onclick="addToCart(${productList[i].id})">mua</button></p>
             </div>
    `
     }
     document.getElementsByClassName("product-list")[0].innerHTML = text
 }
-renderProducts();
+renderProducts(products);
 // function đi mua hàng
 function addToCart(productId) {
     // console.log("productId", productId);
@@ -141,3 +144,17 @@ function showCount() {
     }
 }
 showCount();
+// function tìm kiếm sản phẩm ( tìm kiếm bánh);
+// đi sâu nghiên cứu kĩ thuật DEBOUNCE.
+function searchCake() {
+   let inputValue=document.getElementById("search").value;
+    let result=products.filter((item)=>{
+        return item.name.indexOf(inputValue) !=-1;
+    })
+    console.log(result);
+    if(result.length !=0 ){
+        renderProducts(result);
+    }else{
+        renderProducts();
+    }
+}
